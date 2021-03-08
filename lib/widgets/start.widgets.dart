@@ -63,7 +63,7 @@ class StartWidgetPage extends StatelessWidget{
   }
 
 
-  Widget goHome(){
+  Widget goHome(BuildContext context){
 
     return Container(
       alignment: Alignment.center,
@@ -72,13 +72,14 @@ class StartWidgetPage extends StatelessWidget{
         borderRadius: BorderRadius.circular(50),
           child: FlatButton(
             
-            minWidth: 250,
-            color: Color.fromRGBO(10, 1, 100, 1),
-            onPressed: (){},
+            minWidth: 10,
+            height: 70,
+            color:Color.fromRGBO(10, 1, 100, 1),
+            onPressed: ()=>goToPage(context),
             
             child: Icon(
               Icons.login,
-              size: 45,
+              size: 38,
               color: Colors.white,
             )
 
@@ -87,6 +88,15 @@ class StartWidgetPage extends StatelessWidget{
     );
   }
 
+  void goToPage(BuildContext context){
 
+    Future.delayed(Duration(milliseconds: 10), (){
+      return true;
+    }).then((bool value){
+      if(value) Navigator.pushNamed(context, 'home');
+    });
+ 
+  }
+ 
 
 }
