@@ -6,7 +6,7 @@ class StartWidgetPage extends StatelessWidget{
   Widget build(context){
 
     return Container(
-      height: 296.0,
+      height: 290.0,
       margin: EdgeInsets.only(top: 15, left:15, right:15, bottom:20),
       child: FadeInImage(
         placeholder: AssetImage('assets/loading.gif'),
@@ -19,6 +19,45 @@ class StartWidgetPage extends StatelessWidget{
     );
 
 
+
+  }
+
+  Widget titleStart(){
+
+
+    return  Container(
+      alignment: Alignment.center,
+       margin: EdgeInsets.only(bottom:20),
+      child: Text(
+        'Organize your files at\n one place!',
+       
+        style: TextStyle(
+          color: Color.fromRGBO(10, 1, 100, 1),
+          fontWeight: FontWeight.bold,
+          fontSize: 38
+        )
+
+      )
+
+    );
+
+  }
+
+  Widget descriptionStart(){
+
+    return Container(
+       alignment: Alignment.center,
+      child: Text(
+        'A file manager or file browser is a computer program\n  that provides a user interface to manage files and \n  folders'
+          
+        ,style: TextStyle(
+          color: Colors.grey[500],
+          fontWeight: FontWeight.w400,
+          fontSize: 17
+        )
+
+      )
+    );
 
   }
 
