@@ -21,7 +21,11 @@ class BannerHome extends StatelessWidget{
         
         children: [
 
-          this.barHome()
+          this.barHome(),
+          this.titleBanner(),
+          this.descriptionBanner()
+
+
         ]
 
     ));
@@ -35,7 +39,7 @@ class BannerHome extends StatelessWidget{
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         
-        Icon(Icons.data_usage_outlined,size:28, color:Colors.white),
+        Icon(Icons.dashboard_customize,size:28, color:Colors.white),
         this.avatar()
 
     ]);
@@ -49,6 +53,7 @@ class BannerHome extends StatelessWidget{
 
         Icon(Icons.search, color:Colors.white,size:30),
         Separated(20,0),
+
         CircleAvatar(
           backgroundColor: Colors.transparent,
           child: FadeInImage(
@@ -60,4 +65,45 @@ class BannerHome extends StatelessWidget{
     );
   }
 
+  Widget titleBanner(){
+
+    return Container(
+      alignment: Alignment.topLeft,
+      margin: EdgeInsets.only(top: 30,left:10),
+      child: Text(
+        'Hello Jeremias,',
+        style:TextStyle(
+          fontWeight: FontWeight.w500,
+          color:Colors.white,
+          fontSize: 30
+        )
+      )
+
+
+    );
+
+
+  }
+  Widget descriptionBanner(){
+
+    return Container(
+      alignment: Alignment.topLeft,
+      margin: EdgeInsets.only(top: 15,left:10),
+      child: Text(
+        'Welcome back to file management!',
+        style:TextStyle(
+          fontWeight: FontWeight.w400,
+          color:Colors.white,
+          fontSize: 20
+        )
+      )
+
+
+    );
+
+
+  }
+
 }
+
+
