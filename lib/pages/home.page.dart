@@ -11,11 +11,11 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner:false,
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: ListView(
           children: [
             
             Safe(BannerHome())
-
 
           ],
         )
