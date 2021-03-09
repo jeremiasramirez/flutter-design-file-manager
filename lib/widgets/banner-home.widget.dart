@@ -5,8 +5,8 @@ class BannerHome extends StatelessWidget{
   
   Widget build(context){
     return Container(
-      height: 250,
-      padding:EdgeInsets.all(15),
+      height: 240,
+      padding:EdgeInsets.only(left:15,right:15,top:15),
       decoration:BoxDecoration(
 
         color:Colors.blue[900],
@@ -23,7 +23,8 @@ class BannerHome extends StatelessWidget{
 
           this.barHome(),
           this.titleBanner(),
-          this.descriptionBanner()
+          this.descriptionBanner(),
+          this.routeFakeBanner()
 
 
         ]
@@ -97,6 +98,56 @@ class BannerHome extends StatelessWidget{
           fontSize: 20
         )
       )
+
+
+    );
+
+
+  }
+
+
+   Widget routeFakeBanner(){
+
+    return Container(
+      alignment: Alignment.bottomCenter,
+      margin: EdgeInsets.only(top: 35,),
+      height: 58,
+      width: 200,
+      padding:EdgeInsets.all(22),
+      decoration:BoxDecoration(
+        
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+        
+        color:Colors.white.withOpacity(1)
+      ),
+      child: Row( 
+
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        
+        children: [
+
+          Text(
+            'Internal',
+             style:TextStyle(
+               fontSize: 16,
+               color:Colors.black,
+               fontWeight: FontWeight.bold
+              )
+          ),
+          Text(
+            'External',
+            style:TextStyle(
+              fontSize: 16,
+              color:Colors.grey[500],
+              fontWeight: FontWeight.bold
+            )
+          ),
+          
+        ],
+      ),
 
 
     );
