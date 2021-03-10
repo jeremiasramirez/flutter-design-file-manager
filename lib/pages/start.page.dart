@@ -16,9 +16,9 @@ class StartPage extends StatelessWidget {
           children: [
 
             Safe(StartWidgetPage()),
-            Safe(StartWidgetPage().titleStart()),
-            Safe(StartWidgetPage().descriptionStart()),
-            Safe(StartWidgetPage().goHome(context))
+            StartWidgetPage().titleStart(),
+            StartWidgetPage().descriptionStart(),
+            StartWidgetPage().goHome(context)
             
 
           ],

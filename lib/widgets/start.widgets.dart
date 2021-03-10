@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_manager/widgets/to-page.navigate.dart';
 
 
 class StartWidgetPage extends StatelessWidget{
@@ -49,9 +50,8 @@ class StartWidgetPage extends StatelessWidget{
       alignment: Alignment.center,
       margin: EdgeInsets.only(bottom:50),
       child: Text(
-        'A file manager or file browser is a computer program\n  that provides a user interface to manage files and \n  folders'
-          
-        ,style: TextStyle(
+        'A file manager or file browser is a computer program\n  that provides a user interface to manage files and \n  folders',
+        style: TextStyle(
           color: Colors.grey[500],
           fontWeight: FontWeight.w400,
           fontSize: 17
@@ -75,7 +75,7 @@ class StartWidgetPage extends StatelessWidget{
             minWidth: 10,
             height: 70,
             color:Color.fromRGBO(10, 1, 100, 1),
-            onPressed: ()=>goToPage(context),
+            onPressed: ()=>goToPage(context,'home'),
             
             child: Icon(
               Icons.login,
@@ -88,15 +88,7 @@ class StartWidgetPage extends StatelessWidget{
     );
   }
 
-  void goToPage(BuildContext context){
-
-    Future.delayed(Duration(milliseconds: 10), (){
-      return true;
-    }).then((bool value){
-      if(value) Navigator.pushNamed(context, 'home');
-    });
- 
-  }
+  
  
 
 }
