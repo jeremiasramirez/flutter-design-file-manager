@@ -58,7 +58,7 @@ class BannerHome extends StatelessWidget{
         CircleAvatar(
           backgroundColor: Colors.transparent,
           child: FadeInImage(
-            placeholder: AssetImage('assets/loading.gif'),
+            placeholder: AssetImage('assets/loading-2.gif'),
             image:NetworkImage('https://electronicssoftware.net/wp-content/uploads/user.png'))
         )
 

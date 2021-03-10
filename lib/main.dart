@@ -12,6 +12,7 @@ class StorageManager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.blue[900],
       debugShowCheckedModeBanner: false,
       title: 'Storage Manager',
       initialRoute: 'start',

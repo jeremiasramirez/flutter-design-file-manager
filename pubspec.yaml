@@ -29,6 +29,7 @@ flutter:
 
   assets:
     - assets/loading.gif
+    - assets/loading-2.gif
 
  
   # example:
