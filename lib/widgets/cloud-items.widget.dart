@@ -89,7 +89,7 @@ class CloudItems extends StatelessWidget{
   FadeInImage cloudImage(){
     
     return FadeInImage(
-      width: 85,
+      width: 65,
       placeholder: AssetImage('assets/loading-2.gif'),
       image:NetworkImage(this.urlImage)
     );

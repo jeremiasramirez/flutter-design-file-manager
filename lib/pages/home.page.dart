@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_manager/widgets/banner-home.widget.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
 
         backgroundColor: Colors.white,
         body: ListView(
-
+          
           physics:BouncingScrollPhysics(),
           children:  listItemsCloud(context)
         )
