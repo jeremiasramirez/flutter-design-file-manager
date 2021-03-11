@@ -37,7 +37,7 @@ class FolderFiles extends StatelessWidget{
       height: 170,
       decoration: BoxDecoration(
         color:Colors.grey[200],
-        borderRadius: BorderRadius.circular(20)
+        borderRadius: BorderRadius.circular(25)
       ),
       margin:EdgeInsets.only(bottom: 18, left:10, right:10),
       padding:EdgeInsets.only(top:20,left:8, right:8),
@@ -45,7 +45,8 @@ class FolderFiles extends StatelessWidget{
 
         children: [
             this.topFolder(image),
-            this.titleFolder(title)
+            this.titleFolder(title),
+            this.createdAt()
         ],
 
       )
@@ -55,7 +56,8 @@ class FolderFiles extends StatelessWidget{
   Widget titleFolder(String title){
     
     return Container(
-      margin:EdgeInsets.only(left:10,top:20),
+      
+      margin:EdgeInsets.only(left:10,top:20, bottom: 18),
       alignment:Alignment.topLeft,
       child:Text(
         title,
@@ -94,6 +96,15 @@ class FolderFiles extends StatelessWidget{
      placeholder: AssetImage('assets/loading.gif'),
      image: NetworkImage(image)
   );
+ }
+
+ Widget createdAt(){
+   return Text(
+    "Created\t\t 03/2021\t\t\t\t\t\t\t\t\t\t\t\t",
+    style:TextStyle(
+      color:Colors.grey[500],
+      fontWeight: FontWeight.bold
+    ));
  }
 
 }
